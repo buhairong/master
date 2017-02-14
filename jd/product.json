@@ -1,0 +1,9 @@
+[
+  {"id":698469,"name":"JavaScript高级程序设计","price":78.3,"imgsrc":"101.jpg"},
+  {"id":698470,"name":"JavaScript DOM 编程艺术","price":48.5,"imgsrc":"102.jpg"},
+  {"id":698471,"name":"锋利的jQuery","price":55,"imgsrc":"103.jpg"},
+  {"id":698472,"name":"深入浅出Node","price":39,"imgsrc":"104.jpg"},
+  {"id":698473,"name":"你不知道的JS上卷","price":48.5,"imgsrc":"105.jpg"},
+  {"id":698474,"name":"JavaScript设计模式","price":54.6,"imgsrc":"106.jpg"},
+  {"id":698475,"name":"你不知道的JS中卷","price":65,"imgsrc":"107.jpg"}
+]

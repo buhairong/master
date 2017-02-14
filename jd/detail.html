@@ -1,0 +1,499 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>商品详情页</title>
+<link href="css/detail.css" rel="stylesheet" type="text/css">
+<script src="js/detail.js"></script>
+</head>
+
+<body>
+<!--头部开始-->
+<!--<div class="header">
+	&lt;!&ndash;导航开始&ndash;&gt;
+	<div class="top">
+    	<div class="inner">
+        	<div class="area">送至：上海<i>◇</i></div>
+        	<ul>
+            	<li><a class="first" href="#">你好，请登录</a><a class="active" href="#">免费注册</a></li>
+                <li class="line"></li>
+                <li><a href="#">我的订单</a></li>
+                <li class="line"></li>
+                <li class="bg"><a href="#">我的京东<i>◇</i></a></li>
+                <li class="line"></li>
+                <li><a href="#">京东会员</a></li>
+                <li class="line"></li>
+                <li><a href="#">企业采购</a></li>
+                <li class="line"></li>
+                <li class="bg"><a href="#"><span></span>手机京东<i>◇</i></a></li>
+                <li class="line"></li>
+                <li class="bg"><a href="#">关注京东<i>◇</i></a></li>
+                <li class="line"></li>
+                <li class="bg"><a href="#">客户服务<i>◇</i></a></li>
+                <li class="line"></li>
+                <li class="bg"><a href="#">网站导航<i>◇</i></a></li>
+            </ul>
+        </div>
+    </div>
+    &lt;!&ndash;导航结束&ndash;&gt;
+    &lt;!&ndash;搜索块开始&ndash;&gt;
+    <div class="mid clearfix">
+    	<div class="logo"><a href="#"><img src="images/logo-201305.png" alt="图片显示错误"></a></div>
+    	<div class="search">
+        	<form>
+            	<input class="text" type="text" placeholder="卡通手机壳">
+                <input class="sub" type="submit" value="搜索">
+            </form>
+            <div class="tags">
+            	<a class="active" href="#">七夕礼品</a>
+            	<a href="#">消暑神器</a>
+            	<a href="#">农用物资</a>
+            	<a href="#">鲜花99元</a>
+            	<a href="#">电影京券</a>
+            	<a href="#">防晒喷雾</a>
+            	<a href="#">永生花</a>
+            	<a href="#">小米电脑</a>
+            	<a href="#">thinkpad</a>            
+            </div>
+        </div>
+    	<div class="market">
+        	<a href="#">我的购物车</a>
+            <i>></i>
+            <div class="number">1000000</div>
+        </div>
+    </div>
+    &lt;!&ndash;搜索块结束&ndash;&gt;
+    <div class="bot clearfix">
+    	<div class="nav">全部商品分类</div>
+    	<ul>
+        	<li><a href="#">服装城</a></li>
+        	<li><a href="#">美妆馆</a></li>
+        	<li><a href="#">京东超市</a></li>
+        	<li><a href="#">生鲜</a></li>
+        	<li><a href="#">全球购</a></li>
+        	<li><a href="#">闪购</a></li>
+        	<li><a href="#">团购</a></li>
+        	<li><a href="#">拍卖</a></li>
+        	<li><a href="#">金融</a></li>
+        </ul>
+    </div>
+</div>-->
+<!--头部结束-->
+
+<div ng-controller="detailCtrl">
+<!-- page2 商品选择区 开始 -->
+<div class="page2">
+	<div class="inner">
+    	<h4>
+        	<em><a href="#/products">图书</a></em><span>></span>
+            <a href="#/products">计算机与互联网</a><span>></span>
+            <a href="#/products">编程语言与程序设计</a><span>></span>
+            {{product.name}}
+        </h4>
+        <div class="content clearfix">
+        	<div class="tabList">
+                <div class="tab">        
+                    <div class="tabContent">
+                        <div class="tabItem">
+                            <div class="s_img"><img src="images/{{product.imgsrc}}" alt="图片路径错误"><span></span></div>
+                            <div class="zoom_img"><img src="images/{{product.imgsrc}}" alt="图片路径错误"></div>
+                        </div>
+                        <div class="tabItem hide">
+                            <div class="s_img"><img src="images/41ae83c0-f276-451a-8fca-3f769820.jpg" alt="图片路径错误"><span></span></div>                        
+                            <div class="zoom_img"><img src="images/41ae83c0-f276-451a-8fca-3f769820f.jpg" alt="图片路径错误"></div>
+                        </div>
+                        <div class="tabItem hide">
+                            <div class="s_img"><img src="images/569d9a8bNd25cf90c_002.jpg" alt="图片路径错误"><span></span></div>                        
+                            <div class="zoom_img"><img src="images/569d9a8bNd25cf90c (1).jpg" alt="图片路径错误"></div>
+                        </div> 
+                        <div class="tabItem hide">
+                            <div class="s_img"><img src="images/569d9a8bNa05f64a8_002.jpg" alt="图片路径错误"><span></span></div>                        
+                            <div class="zoom_img"><img src="images/569d9a8bNa05f64a8 (1).jpg" alt="图片路径错误"></div>
+                        </div> 
+                        <div class="tabItem hide">
+                            <div class="s_img"><img src="images/569d9a8bN.jpg" alt="图片路径错误"><span></span></div>                        
+                            <div class="zoom_img"><img src="images/569d9a8bN1eb5ed58 (1).jpg" alt="图片路径错误"></div>
+                        </div>                
+                    </div>
+                    <ul>
+                        <li  class="active" data-index="0"><img src="images/{{product.imgsrc}}" alt="图片路径错误"></li>
+                        <li data-index="1"><img src="images/41ae83c0-f276-451a-8fca-3f769820f3d1.jpg" alt="图片路径错误"></li>
+                        <li data-index="2"><img src="images/569d9a8bNd25cf90c.jpg" alt="图片路径错误"></li>
+                        <li data-index="3"><img src="images/569d9a8bNa05f64a8.jpg" alt="图片路径错误"></li>
+                        <li data-index="4"><img src="images/569d9a8bN1eb5ed58_002.jpg" alt="图片路径错误"></li>
+                    </ul>
+                    <a href="javascript:;" class="prevBtn">&laquo;</a>
+                    <a href="javascript:;" class="nextBtn">&raquo;</a>
+                    <div class="bot">
+                        <p>商品编号：{{product.id}}</p>
+                        <a href="#"><img src="images/icon_06.png" alt="图片路径错误">关注商品</a>
+                        <a href="#"><img src="images/icon1_03.png" alt="图片路径错误">分享</a>
+                    </div>            
+                </div>
+                <div class="tab hide">        
+                    <div class="tabContent">
+                        <div class="tabItem">
+                            <div class="s_img"><img src="images/552e7594N5f9833e9 (2).jpg" alt="图片路径错误"><span></span></div>                        
+                            <div class="zoom_img"><img src="images/552e7594N5f9833e9(4).jpg" alt="图片路径错误"></div>
+                        </div>
+                        <div class="tabItem hide">
+                            <div class="s_img"><img src="images/41ae83c0-f276-451a-8fca-3f769820.jpg" alt="图片路径错误"><span></span></div>                        
+                            <div class="zoom_img"><img src="images/41ae83c0-f276-451a-8fca-3f769820f.jpg" alt="图片路径错误"></div>
+                        </div>
+                        <div class="tabItem hide">
+                            <div class="s_img"><img src="images/569d9a8bNd25cf90c_002.jpg" alt="图片路径错误"><span></span></div>                        
+                            <div class="zoom_img"><img src="images/569d9a8bNd25cf90c (1).jpg" alt="图片路径错误"></div>
+                        </div> 
+                        <div class="tabItem hide">
+                            <div class="s_img"><img src="images/569d9a8bNa05f64a8_002.jpg" alt="图片路径错误"><span></span></div>                        
+                            <div class="zoom_img"><img src="images/569d9a8bNa05f64a8 (1).jpg" alt="图片路径错误"></div>
+                        </div> 
+                        <div class="tabItem hide">
+                            <div class="s_img"><img src="images/569d9a8bN.jpg" alt="图片路径错误"><span></span></div>                        
+                            <div class="zoom_img"><img src="images/569d9a8bN1eb5ed58 (1).jpg" alt="图片路径错误"></div>
+                        </div>                
+                    </div>
+                    <ul>
+                        <li  class="active" data-index="0"><img src="images/552e7594N5f9833e9(1).jpg" alt="图片路径错误"></li>
+                        <li data-index="1"><img src="images/41ae83c0-f276-451a-8fca-3f769820f3d1.jpg" alt="图片路径错误"></li>
+                        <li data-index="2"><img src="images/569d9a8bNd25cf90c.jpg" alt="图片路径错误"></li>
+                        <li data-index="3"><img src="images/569d9a8bNa05f64a8.jpg" alt="图片路径错误"></li>
+                        <li data-index="4"><img src="images/569d9a8bN1eb5ed58_002.jpg" alt="图片路径错误"></li>
+                    </ul>
+                    <a href="javascript:;" class="prevBtn">&laquo;</a>
+                    <a href="javascript:;" class="nextBtn">&raquo;</a>
+                    <div class="bot">
+                        <p>商品编号：698469</p>                    
+                        <a href="#"><img src="images/icon_06.png" alt="图片路径错误">关注商品</a>
+                        <a href="#"><img src="images/icon1_03.png" alt="图片路径错误">分享</a>
+                    </div>            
+                </div>
+                <div class="tab hide">        
+                    <div class="tabContent">
+                        <div class="tabItem">
+                            <div class="s_img"><img src="images/rBEGDFD2UYIIAAAAAAGrx67MlCIAABWBAKB-WkAAavf388.jpg" alt="图片路径错误"><span></span></div>                        
+                            <div class="zoom_img"><img src="images/rBEGDFD2UYIIAAAAAAGrx67MlCIAABWBAKB-WkAAavf388(4).jpg" alt="图片路径错误"></div>
+                        </div>
+                        <div class="tabItem hide">
+                            <div class="s_img"><img src="images/41ae83c0-f276-451a-8fca-3f769820.jpg" alt="图片路径错误"><span></span></div>                        
+                            <div class="zoom_img"><img src="images/41ae83c0-f276-451a-8fca-3f769820f.jpg" alt="图片路径错误"></div>
+                        </div>
+                        <div class="tabItem hide">
+                            <div class="s_img"><img src="images/569d9a8bNd25cf90c_002.jpg" alt="图片路径错误"><span></span></div>                        
+                            <div class="zoom_img"><img src="images/569d9a8bNd25cf90c (1).jpg" alt="图片路径错误"></div>
+                        </div> 
+                        <div class="tabItem hide">
+                            <div class="s_img"><img src="images/569d9a8bNa05f64a8_002.jpg" alt="图片路径错误"><span></span></div>                        
+                            <div class="zoom_img"><img src="images/569d9a8bNa05f64a8 (1).jpg" alt="图片路径错误"></div>
+                        </div> 
+                        <div class="tabItem hide">
+                            <div class="s_img"><img src="images/569d9a8bN.jpg" alt="图片路径错误"><span></span></div>                        
+                            <div class="zoom_img"><img src="images/569d9a8bN1eb5ed58 (1).jpg" alt="图片路径错误"></div>
+                        </div>                
+                    </div>
+                    <ul>
+                        <li  class="active" data-index="0"><img src="images/rBEGDFD2UYIIAAAAAAGrx67MlCIAABWBAKB-WkAAavf388(1).jpg" alt="图片路径错误"></li>
+                        <li data-index="1"><img src="images/41ae83c0-f276-451a-8fca-3f769820f3d1.jpg" alt="图片路径错误"></li>
+                        <li data-index="2"><img src="images/569d9a8bNd25cf90c.jpg" alt="图片路径错误"></li>
+                        <li data-index="3"><img src="images/569d9a8bNa05f64a8.jpg" alt="图片路径错误"></li>
+                        <li data-index="4"><img src="images/569d9a8bN1eb5ed58_002.jpg" alt="图片路径错误"></li>
+                    </ul>
+                    <a href="javascript:;" class="prevBtn">&laquo;</a>
+                    <a href="javascript:;" class="nextBtn">&raquo;</a>
+                    <div class="bot">
+                        <p>商品编号：698469</p>                    
+                        <a href="#"><img src="images/icon_06.png" alt="图片路径错误">关注商品</a>
+                        <a href="#"><img src="images/icon1_03.png" alt="图片路径错误">分享</a>
+                    </div>            
+                </div>
+                <div class="tab hide">        
+                    <div class="tabContent">
+                        <div class="tabItem">
+                            <div class="s_img"><img src="images/rBEhV1KEd8YIAAAAAAXXX-3RZXsAAFm6wFisqIABdd3211 (2).jpg" alt="图片路径错误"><span></span></div>                        
+                            <div class="zoom_img"><img src="images/rBEhV1KEd8YIAAAAAAXXX-3RZXsAAFm6wFisqIABdd3211(4).jpg" alt="图片路径错误"></div>
+                        </div>
+                        <div class="tabItem hide">
+                            <div class="s_img"><img src="images/41ae83c0-f276-451a-8fca-3f769820.jpg" alt="图片路径错误"><span></span></div>                        
+                            <div class="zoom_img"><img src="images/41ae83c0-f276-451a-8fca-3f769820f.jpg" alt="图片路径错误"></div>
+                        </div>
+                        <div class="tabItem hide">
+                            <div class="s_img"><img src="images/569d9a8bNd25cf90c_002.jpg" alt="图片路径错误"><span></span></div>                        
+                            <div class="zoom_img"><img src="images/569d9a8bNd25cf90c (1).jpg" alt="图片路径错误"></div>
+                        </div> 
+                        <div class="tabItem hide">
+                            <div class="s_img"><img src="images/569d9a8bNa05f64a8_002.jpg" alt="图片路径错误"><span></span></div>                        
+                            <div class="zoom_img"><img src="images/569d9a8bNa05f64a8 (1).jpg" alt="图片路径错误"></div>
+                        </div> 
+                        <div class="tabItem hide">
+                            <div class="s_img"><img src="images/569d9a8bN.jpg" alt="图片路径错误"><span></span></div>                        
+                            <div class="zoom_img"><img src="images/569d9a8bN1eb5ed58 (1).jpg" alt="图片路径错误"></div>
+                        </div>                
+                    </div>
+                    <ul>
+                        <li  class="active" data-index="0"><img src="images/rBEhV1KEd8YIAAAAAAXXX-3RZXsAAFm6wFisqIABdd3211(1).jpg" alt="图片路径错误"></li>
+                        <li data-index="1"><img src="images/41ae83c0-f276-451a-8fca-3f769820f3d1.jpg" alt="图片路径错误"></li>
+                        <li data-index="2"><img src="images/569d9a8bNd25cf90c.jpg" alt="图片路径错误"></li>
+                        <li data-index="3"><img src="images/569d9a8bNa05f64a8.jpg" alt="图片路径错误"></li>
+                        <li data-index="4"><img src="images/569d9a8bN1eb5ed58_002.jpg" alt="图片路径错误"></li>
+                    </ul>
+                    <a href="javascript:;" class="prevBtn">&laquo;</a>
+                    <a href="javascript:;" class="nextBtn">&raquo;</a>
+                    <div class="bot">
+                        <p>商品编号：698469</p>                    
+                        <a href="#"><img src="images/icon_06.png" alt="图片路径错误">关注商品</a>
+                        <a href="#"><img src="images/icon1_03.png" alt="图片路径错误">分享</a>
+                    </div>            
+                </div>
+                <div class="tab hide">        
+                    <div class="tabContent">
+                        <div class="tabItem">
+                            <div class="s_img"><img src="images/55345a03N7353b74e (2).jpg" alt="图片路径错误"><span></span></div>                        
+                            <div class="zoom_img"><img src="images/55345a03N7353b74e(4).jpg" alt="图片路径错误"></div>
+                        </div>
+                        <div class="tabItem hide">
+                            <div class="s_img"><img src="images/41ae83c0-f276-451a-8fca-3f769820.jpg" alt="图片路径错误"><span></span></div>                        
+                            <div class="zoom_img"><img src="images/41ae83c0-f276-451a-8fca-3f769820f.jpg" alt="图片路径错误"></div>
+                        </div>
+                        <div class="tabItem hide">
+                            <div class="s_img"><img src="images/569d9a8bNd25cf90c_002.jpg" alt="图片路径错误"><span></span></div>                        
+                            <div class="zoom_img"><img src="images/569d9a8bNd25cf90c (1).jpg" alt="图片路径错误"></div>
+                        </div> 
+                        <div class="tabItem hide">
+                            <div class="s_img"><img src="images/569d9a8bNa05f64a8_002.jpg" alt="图片路径错误"><span></span></div>                        
+                            <div class="zoom_img"><img src="images/569d9a8bNa05f64a8 (1).jpg" alt="图片路径错误"></div>
+                        </div> 
+                        <div class="tabItem hide">
+                            <div class="s_img"><img src="images/569d9a8bN.jpg" alt="图片路径错误"><span></span></div>                        
+                            <div class="zoom_img"><img src="images/569d9a8bN1eb5ed58 (1).jpg" alt="图片路径错误"></div>
+                        </div>                
+                    </div>
+                    <ul>
+                        <li  class="active" data-index="0"><img src="images/55345a03N7353b74e(1).jpg" alt="图片路径错误"></li>
+                        <li data-index="1"><img src="images/41ae83c0-f276-451a-8fca-3f769820f3d1.jpg" alt="图片路径错误"></li>
+                        <li data-index="2"><img src="images/569d9a8bNd25cf90c.jpg" alt="图片路径错误"></li>
+                        <li data-index="3"><img src="images/569d9a8bNa05f64a8.jpg" alt="图片路径错误"></li>
+                        <li data-index="4"><img src="images/569d9a8bN1eb5ed58_002.jpg" alt="图片路径错误"></li>
+                    </ul>
+                    <a href="javascript:;" class="prevBtn">&laquo;</a>
+                    <a href="javascript:;" class="nextBtn">&raquo;</a>
+                    <div class="bot">
+                        <p>商品编号：698469</p>                    
+                        <a href="#"><img src="images/icon_06.png" alt="图片路径错误">关注商品</a>
+                        <a href="#"><img src="images/icon1_03.png" alt="图片路径错误">分享</a>
+                    </div>            
+                </div>
+                <div class="tab hide">        
+                    <div class="tabContent">
+                        <div class="tabItem">
+                            <div class="s_img"><img src="images/55c451daNf96a1c1c (2).jpg" alt="图片路径错误"><span></span></div>                        
+                            <div class="zoom_img"><img src="images/55c451daNf96a1c1c(4).jpg" alt="图片路径错误"></div>
+                        </div>
+                        <div class="tabItem hide">
+                            <div class="s_img"><img src="images/41ae83c0-f276-451a-8fca-3f769820.jpg" alt="图片路径错误"><span></span></div>                        
+                            <div class="zoom_img"><img src="images/41ae83c0-f276-451a-8fca-3f769820f.jpg" alt="图片路径错误"></div>
+                        </div>
+                        <div class="tabItem hide">
+                            <div class="s_img"><img src="images/569d9a8bNd25cf90c_002.jpg" alt="图片路径错误"><span></span></div>                        
+                            <div class="zoom_img"><img src="images/569d9a8bNd25cf90c (1).jpg" alt="图片路径错误"></div>
+                        </div> 
+                        <div class="tabItem hide">
+                            <div class="s_img"><img src="images/569d9a8bNa05f64a8_002.jpg" alt="图片路径错误"><span></span></div>                        
+                            <div class="zoom_img"><img src="images/569d9a8bNa05f64a8 (1).jpg" alt="图片路径错误"></div>
+                        </div> 
+                        <div class="tabItem hide">
+                            <div class="s_img"><img src="images/569d9a8bN.jpg" alt="图片路径错误"><span></span></div>                        
+                            <div class="zoom_img"><img src="images/569d9a8bN1eb5ed58 (1).jpg" alt="图片路径错误"></div>
+                        </div>                
+                    </div>
+                    <ul>
+                        <li  class="active" data-index="0"><img src="images/55c451daNf96a1c1c(1).jpg" alt="图片路径错误"></li>
+                        <li data-index="1"><img src="images/41ae83c0-f276-451a-8fca-3f769820f3d1.jpg" alt="图片路径错误"></li>
+                        <li data-index="2"><img src="images/569d9a8bNd25cf90c.jpg" alt="图片路径错误"></li>
+                        <li data-index="3"><img src="images/569d9a8bNa05f64a8.jpg" alt="图片路径错误"></li>
+                        <li data-index="4"><img src="images/569d9a8bN1eb5ed58_002.jpg" alt="图片路径错误"></li>
+                    </ul>
+                    <a href="javascript:;" class="prevBtn">&laquo;</a>
+                    <a href="javascript:;" class="nextBtn">&raquo;</a>
+                    <div class="bot">
+                        <p>商品编号：698469</p>                    
+                        <a href="#"><img src="images/icon_06.png" alt="图片路径错误">关注商品</a>
+                        <a href="#"><img src="images/icon1_03.png" alt="图片路径错误">分享</a>
+                    </div>            
+                </div>
+                <div class="tab hide">        
+                    <div class="tabContent">
+                        <div class="tabItem">
+                            <div class="s_img"><img src="images/57d67736N65f55e5c (2).jpg" alt="图片路径错误"><span></span></div>                        
+                            <div class="zoom_img"><img src="images/57d67736N65f55e5c(4).jpg" alt="图片路径错误"></div>
+                        </div>
+                        <div class="tabItem hide">
+                            <div class="s_img"><img src="images/41ae83c0-f276-451a-8fca-3f769820.jpg" alt="图片路径错误"><span></span></div>                        
+                            <div class="zoom_img"><img src="images/41ae83c0-f276-451a-8fca-3f769820f.jpg" alt="图片路径错误"></div>
+                        </div>
+                        <div class="tabItem hide">
+                            <div class="s_img"><img src="images/569d9a8bNd25cf90c_002.jpg" alt="图片路径错误"><span></span></div>                        
+                            <div class="zoom_img"><img src="images/569d9a8bNd25cf90c (1).jpg" alt="图片路径错误"></div>
+                        </div> 
+                        <div class="tabItem hide">
+                            <div class="s_img"><img src="images/569d9a8bNa05f64a8_002.jpg" alt="图片路径错误"><span></span></div>                        
+                            <div class="zoom_img"><img src="images/569d9a8bNa05f64a8 (1).jpg" alt="图片路径错误"></div>
+                        </div> 
+                        <div class="tabItem hide">
+                            <div class="s_img"><img src="images/569d9a8bN.jpg" alt="图片路径错误"><span></span></div>                        
+                            <div class="zoom_img"><img src="images/569d9a8bN1eb5ed58 (1).jpg" alt="图片路径错误"></div>
+                        </div>                
+                    </div>
+                    <ul>
+                        <li  class="active" data-index="0"><img src="images/57d119d0Nc30686d1.jpg" alt="图片路径错误"></li>
+                        <li data-index="1"><img src="images/41ae83c0-f276-451a-8fca-3f769820f3d1.jpg" alt="图片路径错误"></li>
+                        <li data-index="2"><img src="images/569d9a8bNd25cf90c.jpg" alt="图片路径错误"></li>
+                        <li data-index="3"><img src="images/569d9a8bNa05f64a8.jpg" alt="图片路径错误"></li>
+                        <li data-index="4"><img src="images/569d9a8bN1eb5ed58_002.jpg" alt="图片路径错误"></li>
+                    </ul>
+                    <a href="javascript:;" class="prevBtn">&laquo;</a>
+                    <a href="javascript:;" class="nextBtn">&raquo;</a>
+                    <div class="bot">
+                        <p>商品编号：698469</p>                    
+                        <a href="#"><img src="images/icon_06.png" alt="图片路径错误">关注商品</a>
+                        <a href="#"><img src="images/icon1_03.png" alt="图片路径错误">分享</a>
+                    </div>            
+                </div>
+            </div>        	
+            <div class="mid">
+        		<h2>{{product.name}}</h2>
+                <span class="sub_title">JavaScript技术名著 web开发国内JS一书 销量超过8万册 JavaScript指南</span>
+                <div class="price">
+                	<p>京 东 价：<em>{{product.price | currency:'¥'}}</em>(<a href="#">降价通知</a>)</p>
+                    <div class="comment">累计评价<br><a href="#">1673709</a></div>
+                </div>
+                <div class="services">
+                	<p>配 送 至：<span class="address">北京朝阳区三环以内<i>◇</i></span><em>有货，</em><a href="#">支持99元免运费</a><span>|</span><a href="#">货到付款</a></p>
+                    <p>服　　务：由 京东 发货，并提供售后服务。11:10前完成下单,预计今天(12月25日)送达</p>
+                </div>
+                <!--<div class="select clearfix">
+                	<p>选择系列：</p>
+                    <ul>
+                        <li class="active">JavaScript经典</li>
+                        <li>JavaScript DOM</li>
+                        <li>jQuery学习</li>
+                        <li>Node js学习</li>
+                        <li>你不知道的JS上卷</li>
+                        <li>JavaScript设计模式</li>
+                        <li>你不知道的JS中卷</li>
+                    </ul>
+                </div>-->
+                <div class="selNum clearfix">
+                	<!--<form>-->
+                    	<input type="number" ng-model="num" min="1">
+                        <!--<button class="add" type="button">+</button>
+                        <button class="reduce dis" type="button" disabled >-</button>-->
+                   <!-- </form>-->
+                    <button ng-click="addCart()"><img src="images/cart_03.png" alt="图片路径错误"></button>
+                </div>
+                <div class="prompt">
+                	<p>温馨提示：</p>
+                    <ol>
+                        <li>本商品不能使用 <a href="#">东券</a></li>
+                        <li>支持7天无理由退货</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="sidebar">
+                <div class="logo"><img src="images/555d528eNb794bed1 (1).png" alt="图片路径错误"></div>
+                <div class="shop">
+                	<a href="#">人民邮电出版社</a>
+                    <div class="sale">京东自营</div>
+                </div>
+                <ul class="linklist">
+                	<li><a href="#">联系供应商</a></li>
+                	<li><a href="#">咨询JIMI</a></li>
+                	<li><a href="#">进店逛逛</a></li>
+                	<li><a href="#">关注店铺</a></li>
+                </ul>
+                <p>服务支持：</p>
+                <ul class="servers">
+                	<li><a href="#">夜间配</a></li>
+                	<li><a href="#">自提</a></li>
+                </ul>
+            </div>
+        </div>        
+    </div>
+</div>
+<!-- page2 商品选择区 结束 -->
+
+<!-- page3 商品选择区 开始 -->
+<div class="page3">
+	<div class="tab">
+    	<ul class="tabList">
+        	<li class="active"><a href="javascript:;">推荐配件</a></li>
+        	<li><a href="javascript:;">人气单品</a></li>
+        </ul>
+        <div class="tabContent">
+        	<ul class="tabItem">
+            	<li>
+                	<a href="#"><img src="images/56ea5e6aN38c0f2b8.jpg" alt="图片路径错误"></a>
+                    <a class="name" href="#">OReilly精品图书系列：JavaScript权威指南（第6版)</a>
+                    <em>￥114.70</em>
+                </li>
+                <li>
+                	<a href="#"><img src="images/rBEhVFHbZw0IAAAAAALFxgN_LSsAAA3fgLESAwAAsXe559.jpg" alt="图片路径错误"></a>
+                    <a class="name" href="#">JavaScript语言精粹（修订版）</a>
+                    <em>￥38.70</em>
+                </li>
+                <li>
+                	<a href="#"><img src="images/57997c24Nf9850de8.jpg" alt="图片路径错误"></a>
+                    <a class="name" href="#">CSS权威指南（第3版）</a>
+                    <em>￥47.10</em>
+                </li>
+                <li>
+                	<a href="#"><img src="images/55ec039eNb9a5ff3e.jpg" alt="图片路径错误"></a>
+                    <a class="name" href="#">高性能JavaScript</a>
+                    <em>￥54.40</em>
+                </li>
+                <li>
+                	<a href="#"><img src="images/0185d45c-d0e5-4c31-8183-454e23f1c7da.jpg" alt="图片路径错误"></a>
+                    <a class="name" href="#">精通CSS：高级Web标准解决方案（第2版）</a>
+                    <em>￥38.70</em>
+                </li>             
+            </ul>
+        	<ul class="tabItem hide">
+            	<li>
+                	<a href="#"><img src="images/56ea5e6aN38c0f2b8.jpg" alt="图片路径错误"></a>
+                    <a class="name" href="#">OReilly精品图书系列：JavaScript权威指南（第6版)</a>
+                    <em>￥114.70</em>
+                </li>               
+                <li>
+                	<a href="#"><img src="images/0185d45c-d0e5-4c31-8183-454e23f1c7da.jpg" alt="图片路径错误"></a>
+                    <a class="name" href="#">精通CSS：高级Web标准解决方案（第2版）</a>
+                    <em>￥38.70</em>
+                </li>         
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- page3 商品选择区 结束 -->
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>
+

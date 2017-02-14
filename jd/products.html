@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品列表页</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        #listProducts li{text-align:center;margin:20px 0;}
+        #listProducts h2{font-size:16px;color:#666;}
+        #listProducts em{font-style:normal;font-size:18px;color:#c81623;}
+        #listProducts a{text-decoration:none;color:#666;}
+        #listProducts a:hover{color:#c81623;}
+    </style>
+</head>
+<div class="container" ng-controller="productsCtrl" id="listProducts">
+<div class="panel panel-primary">
+    <div class="panel-heading">商品列表</div>
+    <div class="panel-body">
+        <ul class="list-unstyled">
+            <li class="col-md-3" ng-repeat="product in products">
+                <a class="col-md-12" href="#/detail?id={{product.id}}"><img class="col-md-12" src="images/{{product.imgsrc}}" alt="图片路径发生错误"></a>
+                <h2 class="col-md-12"><a href="#/detail?id={{product.id}}">{{product.name}}</a></h2>
+                <em>{{product.price | currency:'¥'}}</em>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+</html>

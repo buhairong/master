@@ -1,0 +1,68 @@
+<head>
+    <meta charset="UTF-8">
+    <title>我的购物车</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        th,td{text-align: center; }
+        #cart tbody tr td{ vertical-align: middle;}
+    </style>
+</head>
+<div class="container" ng-controller="cartCtrl">
+<div class="panel panel-primary">
+    <div class="panel-heading">我的购物车</div>
+    <div class="panel-body">
+        <p class="text-danger">新春优惠 满99元包邮</p>
+        <p class="well" ng-show="cart.length==0">购物车里还没有商品 <a href="#/">去逛逛</a></p>
+        <table id="cart" class="table table-striped" ng-show="cart.length>0">
+            <thead>
+            <tr>
+                <th class="col-md-1">#</th>
+                <th class="col-md-1">商品图片</th>
+                <th class="col-md-1">商品名称</th>
+                <th class="col-md-1">商品价格</th>
+                <th class="col-md-1">购买数量</th>
+                <th class="col-md-1">商品小计</th>
+                <th class="col-md-1">删除此商品</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="product in cart">
+                <td class="col-md-1">{{$index+1}}</td>
+                <td class="col-md-1"><a class="col-md-12" href="#/detail?id={{product.product.id}}"><img class="col-md-12" src="images/{{product.product.imgsrc}}" /></a></td>
+                <td class="col-md-2"><a href="#/detail?id={{product.product.id}}">{{product.product.name}}</a></td>
+                <td class="col-md-1">{{product.product.price | currency:'¥'}}</td>
+                <td class="col-md-1"><input type="number" min="1" ng-model="cart[$index].number"></td>
+                <td class="col-md-1">{{product.product.price*cart[$index].number | currency:'¥'}}</td>
+                <td class="col-md-1"><a href="" ng-click="del($index)">删除此商品</a></td>
+            </tr>
+            </tbody>
+        </table>
+        <br>
+        <div ng-show="cart.length>0">
+            <p class="text-danger">收货地址：</p>
+            省份：
+            <select ng-model="province" ng-options="p.province for p in address">
+                <option value="">请选择省份</option>
+             </select>
+            城市：
+            <select ng-model="city" ng-options="c.city for c in province.cities">
+                <option value="">请选择城市</option>
+            </select>
+            县区：
+            <select ng-model="xian" ng-options="x for x in city.xian">
+                <option value="">请选择县区</option>
+            </select>
+        </div>
+        <br>
+        <div class="well" ng-show="cart.length>0">
+            <p class="pull-right text-warning">
+                应付金额：{{payment() | currency:"¥"}}元 <br>
+                运费：{{shipping.price | currency:"¥"}}元 <br>
+                实付金额：{{actual() | currency:"¥"}}元<br>
+                地址:{{province.province}} {{city.city}} {{xian}}
+            </p>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+</div>
